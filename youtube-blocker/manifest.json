@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Channel Blocker",
+  "version": "1.0",
+  "description": "Блокирует все каналы YouTube, кроме исключений",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
